@@ -1,16 +1,16 @@
-//Task 6
-import {addProduct , listProducts , findProduct , updateProduct , DeleteProduct} from "./inventory.js";
+//Task 7
 
-console.log(addProduct());
-console.log(listProducts());
-console.log (findProduct(2));
-console.log(updateProduct(2 ,{minimumStock:20}));
-console.log(DeleteProduct("milk"));
+import {
 
-
-
-
+    calculateStatus,
+    GitHighStockProducts,
+    GetLowStockProducts,
+    GtAllProducts,
+} from "./inventory.js";
+import { products } from "./products.js";
 
 
-
-
+console.log(calculateStatus(products[2]));
+console.log(GitHighStockProducts());
+console.log(GetLowStockProducts());
+console.log(GtAllProducts());

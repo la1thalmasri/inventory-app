@@ -1,35 +1,54 @@
-//Task 6
-import {products } from "./products.js";
+//Task 7
+import {
+   products,
+} from "./products.js";
 
-function addProduct(){
-products.push({ id: 5, name: "Chocolate2", price: 3.5, quantity: 5, expiryDate: "2026-10-01", minimumStock: 10, },);
-return products;
+
+function calculateStatus(product) {
+
+   if (new Date(product.expiryDate) < new Date()) {
+      return "EXPIRED";
+   };
+
+   if (product.quantity === 0) {
+      return "OUT_OF_STOCK";
+   }
+
+   if (product.quantity <= product.minimumStock) {
+      return " LOW_STOCK";
+   }
 };
 
-function listProducts(){
-return products;
+
+function GitHighStockProducts(product) {
+   const HighStockProducts = products.filter(product => product.quantity > 10);
+   return HighStockProducts;
 };
 
-function findProduct (id){
-return products.find(x => x.id === id);
+
+function GetLowStockProducts(product) {
+   const LowStockProducts = products.filter(product => product.quantity <= product.minimumStock);
+   return LowStockProducts;
 };
 
-function updateProduct(id, update){
-const product= products.find(product => product.id === id);
- if(! product){
-    return null;
- }
- Object.assign(product, update);
- return product;
+/* function + if =
+function GetLowStockProducts() {
+   const LowStockProducts = products.filter(product => product.quantity <= product.minimumStock);
+   if (LowStockProducts.length === 0) {
+      return "NO PRODUCT"
+   };
+   return LowStockProducts;
+};
+*/
+
+function GtAllProducts() {
+   const product = products.map(product => product.name);
+   return product;
 };
 
-function DeleteProduct(name){
-   const index = products.findIndex(product => product.name === name);
-
-products.splice(index, 1);
-return products;
+export {
+   calculateStatus,
+   GitHighStockProducts,
+   GetLowStockProducts,
+   GtAllProducts,
 };
-
-export {addProduct , listProducts , findProduct , updateProduct , DeleteProduct };
-
-
