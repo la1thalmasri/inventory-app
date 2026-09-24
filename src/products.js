@@ -1,5 +1,3 @@
-//Task 8
-
 const products = [
     {
         id: 0,
@@ -8,7 +6,7 @@ const products = [
         quantity: 20,
         expiryDate: "2026-05-01",
         minimumStock: 10,
-        active: true,
+        active : true,
     },
     {
         id: 1,
@@ -17,7 +15,7 @@ const products = [
         quantity: 30,
         expiryDate: "2026-10-02",
         minimumStock: 40,
-        active: true,
+        active : true,
     },
     {
         id: 2,
@@ -26,7 +24,7 @@ const products = [
         quantity: 50,
         expiryDate: "2026-07-03",
         minimumStock: 30,
-        active: false,
+        active : false,
     },
     {
         id: 3,
@@ -34,8 +32,8 @@ const products = [
         price: 2,
         quantity: 60,
         expiryDate: "2025-10-04",
-        minimumStock: 70,
-        active: true,
+        minimumStock:70,
+        active : true,
     },
     {
         id: 4,
@@ -44,7 +42,7 @@ const products = [
         quantity: 50,
         expiryDate: "2026-10-05",
         minimumStock: 50,
-        active: false,
+        active : false,
     },
 ];
 

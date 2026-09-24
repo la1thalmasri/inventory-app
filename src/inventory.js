@@ -39,8 +39,3 @@ function createOrder(customer, productName, quantity) {
 
 
 export { createOrder };
-
-
-
-
-
